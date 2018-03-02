@@ -16,7 +16,7 @@ service { "tomcat7":
     require => Package["tomcat7"]
 }
 file { "/var/lib/tomcat7/webapps/vraptor-musicjungle.war":
-    source => "/vagrant/.vagrant/manifests/vraptor-musicjungle.war",
+    source => "/vagrant/.vagrant/ manifests/vraptor-musicjungle.war",
     owner => "tomcat7",
     group => "tomcat7",
     mode => 0644,
