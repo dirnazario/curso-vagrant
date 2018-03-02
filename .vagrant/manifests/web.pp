@@ -30,3 +30,9 @@ file { "/var/lib/tomcat7/webapps/vraptor-musicjungle.war":
     require => Package["tomcat7"],
     notify => Service["tomcat7"]
 }
+exec { "musicjungle":
+    command => "mysqladmin -uroot create musicjungle",
+    unless => "mysql -u root musicjungle",
+    path => "/usr/bin",
+    require => Service["mysql"]
+}
