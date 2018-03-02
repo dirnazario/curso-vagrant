@@ -38,7 +38,7 @@ exec { "musicjungle":
 }
 exec {"user":
     command => "mysql -uroot -e \"GRANT ALL PRIVILEGES ON * TO 'musicjungle'@'%' IDENTIFIED BY 'minha-senha';\" musicjungle",
-    unless => "mysql -u musicjungle musicjungle"
+    unless => "mysql -u musicjungle musicjungle",
     path => "/usr/bin",
     require => Service["mysql"]
 }
