@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
     config.vm.define :web do |web_config|
         web_config.vm.network "private_network", ip: "192.168.50.10"
         web_config.vm.provision "puppet" do |puppet|
-            puppet.manifest_file = ".vagrant/manifests/web.pp"
+            puppet.manifest_file = "/home/dir/scripts/curso-vagrant/.vagrant/manifests/web.pp"
         end
     end
 end
